@@ -1,0 +1,118 @@
+/* CSS for modern and wonderful signup form with animations and a new background */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400,500,600&display=swap");
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideInDown 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  animation: slideInUp 1s ease-in-out;
+}
+
+.container form input[type="text"],
+.container form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.container form input[type="text"]:focus,
+.container form input[type="password"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.container form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  animation: slideInLeft 1s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container form button:hover {
+  background-color: #45a049;
+}
+
+.container form button:focus {
+  outline: none;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
